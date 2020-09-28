@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">helloworld</string>
+    <string name="helloworld">HELLO WORLD!</string>
+    <string name="welcoem">WELCOME TO ANDROID STUDIO!</string>
+</resources>
