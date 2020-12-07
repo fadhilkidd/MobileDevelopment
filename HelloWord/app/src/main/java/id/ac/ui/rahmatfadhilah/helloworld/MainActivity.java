@@ -10,11 +10,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    static {
+        System.loadLibrary("cpp_code");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView greeting = findViewById(R.id.greeting);
+        greeting.setText(echo());
     }
+
+    public native String echo();
 
     public void onTimerButtonClick(View view) {
         Intent intent = new Intent(this, TimerActivity.class);
